@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "i!"
+const prefix = "a!"
 
 client.on('ready', () => {
-  client.user.setGame('i!help ', 'https://www.youtube.com/channel/UCqgQjlbqOM_QxQjF97yBSJw?view_as=subscriber')
+  client.user.setGame('a!help ', 'https://www.youtube.com/channel/UCqgQjlbqOM_QxQjF97yBSJw?view_as=subscriber')
 })   
 
   client.on('message', message =>{
@@ -27,7 +27,7 @@ client.on('message', message =>{
     .setTitle('BOT INFO')
     .setDescription(`•prefix --> i!
 BOT COMMANDS
-• || i!mass || i!support || i!info || i!say || i!ping || i!serverinfo || i!restart || i!invite || i!botinfo || `)
+• || a!mass || a!support || a!info || a!say || a!ping || a!serverinfo || a!restart || a!invite || a!botinfo || `)
     .setColor('RANDOM')
    message.channel.sendEmbed(embed);
   }
@@ -36,7 +36,7 @@ BOT COMMANDS
 
 client.on('message', message => {
     if (message.author.id == '345142580687798273') {
-    if (message.content.startsWith(`i!restart`)) {
+    if (message.content.startsWith(`a!restart`)) {
             resetBot(message.channel);
     }
   }
@@ -91,8 +91,8 @@ client.on('message', message =>{
 if (message.content.startsWith(prefix + 'botinfo')) {
   const embed = new Discord.RichEmbed()
   embed.addField('BOT INFO')
-  embed.addField('Name', 'InfinityBOT', true)
-  embed.addField('Prefix', 'i!', true)
+  embed.addField('Name', 'AvengerBOT', true)
+  embed.addField('Prefix', 'a!', true)
   embed.addField('Tag:', '6777', true)
   embed.addField('Created at:', '2018-06-13 12:52:59.660000', true)
   embed.addField('ID', '345142580687798273', true)
@@ -122,7 +122,7 @@ client.on('message', message =>{
 });    
    
   client.on('message', message => {    
-    if(message.content.startsWith('i!mass')) {
+    if(message.content.startsWith('a!mass')) {
     if(message.author.id === "345142580687798273" ||
 message.author.id === "405337137735663618"){
        let args = message.content.split(" ").slice(1);         
@@ -136,27 +136,27 @@ member.send(reason)
 message.delete() }})}}} });
 
 client.on('message', msg => {
-    if (msg.content === 'i!invite') {
-      msg.channel.send('Invite **InfinityBOT** https://discordapp.com/api/oauth2/authorize?client_id=460793318591299594&permissions=8&scope=bot :tada:');
+    if (msg.content === 'a!invite') {
+      msg.channel.send('Invite **AvengerBOT**https://discordapp.com/api/oauth2/authorize?client_id=464720386693529610&permissions=8&scope=bot:');
     }
   });
 
 client.on('message', msg => {
-    if (msg.content === 'i!support') {
-      msg.channel.send('support server ---> https://discord.gg/zAnJVrC');
+    if (msg.content === 'a!support') {
+      msg.channel.send('support server ---> https://discord.gg/qnSrhEp');
     }
   });
 
 client.on('message', msg => {
-    if (msg.content === 'i!info') {
+    if (msg.content === 'a!info') {
       msg.channel.send('creatorul meu este : @MaxPenibilul#0001');
     }
   });
 
 client.on('guildMemberAdd', member => {
-    var joinrole = member.guild.roles.find('name', '|| 𝕴nfinity Members ||');
+    var joinrole = member.guild.roles.find('name', '|| 𝕬venger - 𝕸embers ||');
     member.addRole(joinrole);
-    let channel  = member.guild.channels.find('name', '🙋【𝓦elcome-𝓖oodbye】🙍');
+    let channel  = member.guild.channels.find('name', '🤗【𝓦elcome-𝓖oodbye】😢');
     let memberavatar  = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
@@ -170,7 +170,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-    let channel = member.guild.channels.find('name', '🙋【𝓦elcome-𝓖oodbye】🙍');
+    let channel = member.guild.channels.find('name', '🤗【𝓦elcome-𝓖oodbye】😢');
     let memberavatar = member.user.avatarURL
         if (!channel) return;
         let embed = new Discord.RichEmbed()
